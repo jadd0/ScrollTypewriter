@@ -44,7 +44,6 @@
 
 
 	p {
-		font-size: 1.2rem;
 		line-height: 150%;
     color: white;
     text-align:left;
