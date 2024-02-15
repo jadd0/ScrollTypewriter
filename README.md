@@ -70,10 +70,16 @@ Then, place the following wherever desired. HEIGHT is a placeholder for the heig
 	- This optional property specifies whether the typewriter should start automatically or not
 
 - height: integer
-	- This mandatory property specifies the distance from the top of the DOM and the typewriter
+	- This optional property specifies the distance from the top of the DOM and the typewriter in pixels
+
+- furthestScrolled: integer
+	- This optional property specifies the furthest distance that has been scrolled to in  pixels
 
 - phrase: string
 	- This mandatory property specifies the phrase that will be dispayed in the typewriter
+
+- fontSize: integer
+	- This optional property specifies the font size for the text
 
 
 I apologise for the bloat, but the package works.

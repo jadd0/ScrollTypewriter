@@ -1,7 +1,8 @@
 <script>
-	export let height;
-	export let furthestScrolled;
+	export let height = 0;
+	export let furthestScrolled = 0;
 	export let auto = false;
+	export let fontSize = 20;
 
 	$: if (furthestScrolled >= height && !isTyping) {
 		typing();
@@ -34,7 +35,7 @@
 
 <main>
 	<section>
-		<p>{typedChar}</p>
+		<p style="font-size={fontSize}px">{typedChar}</p>
 	</section>
 </main>
 
