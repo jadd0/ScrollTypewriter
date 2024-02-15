@@ -1,11 +1,13 @@
 <script>
 	export let height;
 	export let furthestScrolled;
+	export let auto = false;
 
 	$: if (furthestScrolled >= height && !isTyping) {
 		typing();
 	}
 
+	
 	export let phrase = ''; 
 	let typedChar = '';
 	let index = 0;
@@ -24,6 +26,10 @@
 	}
 
 	const typing = () => (typewriter = setInterval(typeChar, 20));
+
+	if (auto) {
+		typing()
+	}
 </script>
 
 <main>
@@ -33,26 +39,8 @@
 </main>
 
 <style>
-	main {
-		width: 100vw;
-		height: 100vw;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-between;
-	
-	}
 
-	section {
-		display: flex;
-		flex-direction: column;
-		width: 80%;
-		min-height: 50vh;
-		margin: 2% 0 1%;
-		padding: 20px;
-		box-shadow: 0 -8px 10px -6px #000000, 8px 0 10px -6px #000000;
-		overflow: scroll;
-	}
+
 
 	p {
 		font-size: 1.2rem;
